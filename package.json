@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test:dev": "npx mocha -w --exit test/",
+    "test": "npx mocha --parallel test/",
+    "test:cov": "npx nyc --check-coverage --instrument --report=html --report=text npm test",
+    "start": "node src/"
   },
   "keywords": [],
   "author": "",
